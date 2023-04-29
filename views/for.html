@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Action For</title>
+  </head>
+  <body>
+    {{range $val:= .}}
+    <p>{{.Name}}</p>
+    {{if ge .Grade 80}}
+    <p>Your Grade: A</p>
+    {{else if ge .Grade 65}}
+    <p>Your Grade: B</p>
+    {{else if ge .Grade 50}}
+    <p>Your Grade: C</p>
+    {{else}}
+    <p>Your Grade: D or E</p>
+    {{end}} {{end}}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>{{.Name}}</p>
+    {{if ge .Grade 80}}
+    <p>Your Grade: A</p>
+    {{else if ge .Grade 65}}
+    <p>Your Grade: B</p>
+    {{else if ge .Grade 50}}
+    <p>Your Grade: C</p>
+    {{else}}
+    <p>Your Grade: D or E</p>
+    {{end}}
+  </body>
+</html>
