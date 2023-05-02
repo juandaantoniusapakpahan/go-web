@@ -9,8 +9,9 @@ import (
 )
 
 func TemplateXSS(w http.ResponseWriter, r *http.Request) {
+	body := r.URL.Query().Get("body")
 	if err := goTmpl.ExecuteTemplate(w, "autoEscape.gohtml", map[string]interface{}{
-		"Body":  "<h2>Hello World</h2>",
+		"Body":  body,
 		"Title": "XSS",
 	}); err != nil {
 		panic(err)
