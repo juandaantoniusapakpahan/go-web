@@ -39,3 +39,20 @@ func TestSeverSXX(t *testing.T) {
 
 	server.ListenAndServe()
 }
+
+func TestArraySign(t *testing.T) {
+	nums := []int{9, 72, 34, 29, -49, -22, -77, -17, -66, -75, -44, -30, -24}
+
+	multiply := 1
+	for i := 0; i < len(nums); i++ {
+		if nums[i] == 0 {
+			fmt.Println(0)
+		}
+
+		if nums[i] < 0 {
+			multiply *= -1
+		}
+	}
+	fmt.Println(multiply)
+
+}
